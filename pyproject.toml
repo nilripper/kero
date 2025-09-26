@@ -1,0 +1,36 @@
+[project]
+name = "kero"
+version = "0.1.0"
+description = "A command-line instrument for quantitative analysis of audio convolution and frequency domain image filtering."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    # Audio processing
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+    "scipy>=1.10.0",
+
+    # Image processing
+    "opencv-python>=4.8.0",
+    "Pillow>=10.0.0",
+    "scikit-image>=0.21.0",
+
+    # Scientific computing
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+
+    # Performance
+    "numba>=0.57.0",
+
+    # CLI and utilities
+    "click>=8.1.0",
+    "tqdm>=4.65.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+kero = "kero:cli"
+
+[tool.setuptools]
+py-modules = ["kero"]
